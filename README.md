@@ -6,38 +6,46 @@ The project follows a standardized microbiome analysis workflow consisting of:
 - Loading Data
 - Pre-processing the Data
 - Taxonomically assessing the processed Data 
-- Perforimng Diversity analyses 
+- Performing Diversity analyses 
 - Taxon investigation (Wen et al., 2023)
 
 ## Loading the Data
-The data that is processed is provided by Sharma.
+The data files are publicly available from the European Nucleotide Archive (ENA) browser.
 
-## Pre-processing 
+## Pre-processing the Data
 Initial processing is done with the following steps: 
 
 ### Quality Control
-Cutadapt version 2.4 _(Martin, 2011)_
+With the library `Cutadapt version 2.4` _(Martin, 2011)_
 - Sequences have been identified and counted
-- For the removal of adapter and primer sequences
+- Adapter and primer sequences are removed
+The sequences are now extracted and will be further cleaned and identified.
 
 ### ASV Identification 
-DADA2 _(Callahan et al., 2016)_
-- Sequences have been Denoised
-- Chimera
-- Processing raw data
-- ASV Identifications
+With the libraries `DADA2` _(Callahan et al., 2016)_ and `phyloseq` _(McMurdie et al., 2013)_
+- Sequences have been denoised
+- Chimeric Sequences are removed
+- Raw data is proceessed
+- Amplicon Sequence Variants (ASV's) are identified
+- The ASV data is integrated with asociated metadata into an Phyloseq object
+The sequences have been processed, resulting in a ASV table, in an Phyloseq object which will be analyzed.
 
-### 
+### Assessing the taxonomy
+With data from the `SILVA` database _(Quastel et al., 2013)_ 
+- The ASV table has been analysed
+The output is a filter which exclusively selects the taxa within the relevant study groups. 
 
-s (ASVs). 
-Afterwards, an ASV table was extracted from the sample set, 
-and the SILVA database was used for the taxonomic classification (Quastel et al., 2013). 
-A filter was added in the form of a mapping file (see appendix A). 
-This reference database allowed for the assignment of bacterial taxonomies exclusively for the taxa within the relevant study groups. 
+## Perfroming Diversity Analysis
+With the library `vegan` _(Oksanen et al., 2022)_
+The metrics that are calculated are:
+- Alpha diversity
+- Beta diversity
+- Differential abundances
+- Taxanomical analysis
+The output of the analyses are used for my thesis.
 
-The phyloseq package (McMurdie et al., 2013) was used for data integration in generating an object containing the ASV table 
-and associated metadata for statistical analyses. 
 
-The vegan package (Oksanen et al., 2022) was used for the diversity metrics. 
-For data visualization purposes, the ggplot2 package was used (Wickham, 2016). 
-Sharma, mapping file
+## Data Visualisation
+With the `ggplot2` as seen in _(Wickham, 2016)_ 
+(placeholder images)
+
