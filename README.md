@@ -33,7 +33,7 @@ With the libraries `DADA2` _(Callahan et al., 2016)_ and `phyloseq` _(McMurdie e
 ### Assessing the taxonomy
 With data from the `SILVA` database _(Quastel et al., 2013)_ 
 - The ASVs have been analysed and microbial taxonomy has been assessed. 
-- The ASV table is integrated with associated metadata into an `phyloseq` object
+- The ASV table is integrated with associated metadata into a `phyloseq` object
 
 A mapping file has been added, this acts as a filter which exclusively selects the taxa within the relevant study groups.
 
