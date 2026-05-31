@@ -1,13 +1,13 @@
 # Microbiome Analysis on Chimpanzees and Humans
 
-The analyses are performed in RStudio.  
+The analyses are performed in R (in a RStudio env).  
 
 The project follows a standardized microbiome analysis workflow consisting of:
 - Loading Data
 - Pre-processing the Data
 - Taxonomically assessing the processed Data 
 - Performing Diversity analyses 
-- Taxon investigation (Wen et al., 2023)
+- Taxon investigation
 
 ## Loading the Data
 The data files are publicly available from the European Nucleotide Archive (ENA) browser.
@@ -23,7 +23,7 @@ The sequences are now extracted and will be further cleaned and identified.
 
 ### ASV Identification 
 With the libraries `DADA2` _(Callahan et al., 2016)_ and `phyloseq` _(McMurdie et al., 2013)_
-- Sequences have been denoised
+- Data has been denoised
 - Chimeric Sequences are removed
 - Raw data is proceessed
 - Amplicon Sequence Variants (ASV's) are identified
