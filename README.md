@@ -19,7 +19,9 @@ Initial processing is done with the following steps:
 With the library `Cutadapt version 2.4` _(Martin, 2011)_
 - Sequences have been identified and counted
 - Adapter and primer sequences are removed
+
 The sequences are now extracted and will be further cleaned and identified.
+
 
 ### ASV Identification 
 With the libraries `DADA2` _(Callahan et al., 2016)_ and `phyloseq` _(McMurdie et al., 2013)_
@@ -31,8 +33,10 @@ With the libraries `DADA2` _(Callahan et al., 2016)_ and `phyloseq` _(McMurdie e
 ### Assessing the taxonomy
 With data from the `SILVA` database _(Quastel et al., 2013)_ 
 - The ASVs have been analysed and microbial taxonomy has been assessed. 
-- The ASV table is integrated with associated metadata into an Phyloseq object
+- The ASV table is integrated with associated metadata into an `phyloseq` object
+
 A mapping file has been added, this acts as a filter which exclusively selects the taxa within the relevant study groups.
+
 
 
 ## Perfroming Diversity Analysis
@@ -42,6 +46,7 @@ The metrics that are calculated are:
 - Beta diversity
 - Differential abundances
 - Taxanomical analysis
+
 The output of the analyses are used for my thesis.
 
 
