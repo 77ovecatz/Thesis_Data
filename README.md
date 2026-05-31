@@ -39,7 +39,7 @@ A mapping file has been added, this acts as a filter which exclusively selects t
 
 
 
-## Perfroming Diversity Analysis
+## Performing Diversity Analysis
 With the library `vegan` _(Oksanen et al., 2022)_
 The metrics that are calculated are:
 - Alpha diversity
