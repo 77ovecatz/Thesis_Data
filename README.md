@@ -1,6 +1,6 @@
-# Microbiome Analysis on Chimpanzees and Humans
+# Gut Microbiome Analysis on Captive and Wild Chimpanzees and Humans
 
-The analyses are performed in R (in a RStudio env).  
+The analyses are performed in RStudio.  
 
 The project follows a standardized microbiome analysis workflow consisting of:
 - Loading Data
@@ -24,16 +24,16 @@ The sequences are now extracted and will be further cleaned and identified.
 ### ASV Identification 
 With the libraries `DADA2` _(Callahan et al., 2016)_ and `phyloseq` _(McMurdie et al., 2013)_
 - Data has been denoised
-- Chimeric Sequences are removed
-- Raw data is proceessed
+- Chimerias  are removed
+- Raw data is processed
 - Amplicon Sequence Variants (ASV's) are identified
-- The ASV data is integrated with asociated metadata into an Phyloseq object
-The sequences have been processed, resulting in a ASV table, in an Phyloseq object which will be analyzed.
 
 ### Assessing the taxonomy
 With data from the `SILVA` database _(Quastel et al., 2013)_ 
-- The ASV table has been analysed
-The output is a filter which exclusively selects the taxa within the relevant study groups. 
+- The ASVs have been analysed and microbial taxonomy has been assessed. 
+- The ASV table is integrated with associated metadata into an Phyloseq object
+A mapping file has been added, this acts as a filter which exclusively selects the taxa within the relevant study groups.
+
 
 ## Perfroming Diversity Analysis
 With the library `vegan` _(Oksanen et al., 2022)_
